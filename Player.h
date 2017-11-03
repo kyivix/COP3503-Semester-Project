@@ -8,11 +8,11 @@
 class Player{
  private:
   string name;
-  int totalChips=0; 
-  int tempBetPool=0; 
+  int totalChips=0;
+  int tempBetPool=0;
   Card handOne=0;
-  Card handTwo=0; 
- public: 
+  Card handTwo=0;
+ public:
  Player(string name): name(name){};
   void addOne(Card temp);
   void addTwo(Card temp);
@@ -30,4 +30,13 @@ class Player{
   Deck finalHands();
   void gameOver();
 };
+
+bool Player::raise(int a, int b)
+{
+	if(a >= b)
+	{
+		return false;
+	}
+	return true;
+}
 #endif
